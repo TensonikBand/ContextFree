@@ -1,0 +1,20 @@
+startshape FILAMENTS
+
+shape FILAMENTS
+{
+	loop 72 [r 5]
+		LINER(2.5) [y 1 sat 1 b 0]
+}
+
+shape LINER(number angle)
+
+rule {
+	CIRCLE [y 0.5 s 0.5 r 0.5]
+	LINER(=) [r angle b 0 hue 0 0 
+		y 2 x 0.25 s 0.95]
+}
+
+path SPOT {
+	CLOSEPOLY(CF::Align)
+	FILL[]
+}
